@@ -1,5 +1,5 @@
 Billing = {}
-Billing.Lang = "English"            -- Language you want to use please make sure its in the translation.lua
+Billing.Lang = "Spanish"            -- Language you want to use please make sure its in the translation.lua
 
 Billing.GiveMoneyToJob = true       -- If false the money wont be given to anyone if true the money will be given to the person who is billing
 
