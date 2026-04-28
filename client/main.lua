@@ -1,5 +1,9 @@
-local MenuData <const> = exports.vorp_menu:GetMenuData()
+local Lib <const> = Import({ "/config", "/languages/translations" })
+local Billing <const> = Lib.Billing --[[@as vorp_billing]]
+local Translation <const> = Lib.Translation --[[@as vorp_billing_translation]]
+
 local Core <const> = exports.vorp_core:GetCore()
+local MenuData <const> = exports.vorp_menu:GetMenuData()
 local T <const> = Translation.Langs[Billing.Lang]
 
 RegisterNetEvent("vorp_billing:client:openMenu", function()
@@ -68,7 +72,7 @@ function OpenBillingMenu()
         if not result then return end
 
         if data.current.value == "playerId" and tonumber(result) > 0 then
-            menu.setElement(1, "label", T.MenuLabels.player_id .. "<br><b> "..T.InputInfo.Added .. result)
+            menu.setElement(1, "label", T.MenuLabels.player_id .. "<br><b> " .. T.InputInfo.Added .. result)
             menu.setElement(1, "desc", T.MenuLabels.player_id_desc)
             menu.refresh()
             playerId = tonumber(result)
@@ -90,7 +94,7 @@ function OpenBillingMenu()
             menu.refresh()
             amount = tonumber(result)
         end
-    end, function(data, menu)
+    end, function(_, menu)
         menu.close()
     end)
 end

@@ -27,13 +27,13 @@ Billing.Command = "bill"
 
 Billing.MaxBillAmount = 1000 -- Players can not be billed more than this amount
 
--- Server Side function to check if player is onduty
-local isServer = IsDuplicityVersion()
-if isServer then
-    Billing.GetIsOnduty = function(source)
-        -- add here your own logic for other jobs
-        -- by default these will work for vorp_medic and vorp_police
-        local isDuty = (Player(source).state.isMedicDuty or Player(source).state.isPoliceDuty) and true or false
-        return isDuty -- do return true to remove the onduty check
-    end
+Billing.GetIsOnduty = function(source)
+    -- add here your own logic for other jobs
+    -- by default these will work for vorp_medic and vorp_police
+    local isDuty = (Player(source).state.isMedicDuty or Player(source).state.isPoliceDuty) and true or false
+    return isDuty     -- do return true to remove the onduty check
 end
+
+return {
+    Billing = Billing
+}

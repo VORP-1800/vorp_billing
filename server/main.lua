@@ -1,4 +1,9 @@
+local Lib <const> = Import({ "/config", "/languages/translations", "/languages/Logs" })
+local Billing <const> = Lib.Billing --[[@as vorp_billing]]
+local Translation <const> = Lib.Translation --[[@as vorp_billing_translation]]
+local Logs <const> = Lib.Logs
 local Core <const> = exports.vorp_core:GetCore()
+
 local T <const> = Translation.Langs[Billing.Lang] -- Load the active language for the server
 
 local function checkJob(source, job, grade)
