@@ -46,6 +46,51 @@ Translation.Langs = {
             Added                   = "Added ID: ",
         }
     },
+    Spanish = {
+        MenuLabels = {
+            menu_title     = "Menú de Facturación",
+            submenu_text   = "Submenú",
+            player_id      = "ID del Jugador",
+            player_id_desc = "El ID del jugador al que deseas facturar",
+            bill_reason    = "Motivo de la Factura",
+            reason_desc    = "El motivo de la factura",
+            bill_amount    = "Monto de la Factura",
+            amount_desc    = "El monto de dinero a facturar",
+            confirm        = "Confirmar",
+            confirm_desc   = "Enviar la factura",
+            menu_input     = "Escribe aquí"
+        },
+    
+        Notifications = {
+            fill_all_fields     = "Por favor completa todos los campos",
+            not_allowed_command = "No tienes permiso para usar este comando",
+            not_on_duty         = "No estás en servicio",
+            not_allowed_bill    = "No tienes permiso para facturar",
+            self_billing_error  = "No puedes facturarte a ti mismo",
+            target_not_found    = "Jugador no encontrado, no puedes facturar a jugadores que no están en línea",
+            target_too_far      = "El jugador está demasiado lejos de ti",
+            max_bill_exceeded   = "No puedes facturar más de ",
+            bill_successful     = "Has facturado con éxito",
+            bill_received       = "Has recibido una factura por ",
+            insufficient_funds  = "El jugador no tiene suficiente dinero para pagar la factura",
+            For                 = "por",
+        },
+    
+        ReceiptInfo = {
+            receipt_description = "Esta es una factura que has recibido",
+            billed_by           = "Facturado Por",
+            date                = "Fecha",
+            reason              = "Motivo",
+            Ammount             = "Monto",
+        },
+    
+        InputInfo = {
+            only_numbers_allowed = "Solo se permiten números",
+            only_letters_allowed = "Solo se permiten letras",
+            Added                = "ID Agregado: ",
+        }
+    }
+    
     -- Additional languages can be added here with the same structure.
 }
 
